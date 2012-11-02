@@ -17,7 +17,7 @@ Blog::Application.routes.draw do
    resources  :design
    resources :spiel
 
- # get "artists/new"
+ # get "artists/new"git
 
  # get "artists/create"
 
