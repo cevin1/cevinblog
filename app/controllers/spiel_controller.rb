@@ -19,7 +19,18 @@ def index
   end
 end
 
+def drag
+  
+  function handleDragStart(e) {
+ 	  this.style.opacity = '0.1';  
+ 	}
 
+ 	var cols = document.querySelectorAll('#columns .column');
+ 	[].forEach.call(cols, function(col) {
+ 	  col.addEventListener('dragstart', handleDragStart, false);
+ 	});
+  
+end
 
   def create
   end

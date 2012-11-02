@@ -3,16 +3,48 @@
 
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
-<html>
-<body>	
+	
+	<style type="text/css">
+	#div1
+	{float:left; width:72px; height:111px; margin:50px;padding:50px;  border:1px solid #aaaaaa;}
+	</style>
+	
+	<style type="text/css">
+	#div2
+	{float:left; width:72px; height:111px; position:absolute; top:23px; left:1490px; width:400px; height:1000px;  }
+	</style>
+	
+	<style type="text/css">
+	#div3
+	{float:left; width:72px; height:111px; position:absolute; top:23px; left:1490px; width:400px; height:1000px;  }
+	</style>
+	
+
 	
 	
+	
+	<script>
+	function allowDrop(ev)
+	{
+	ev.preventDefault();
+	}
 
-     
+	function drag(ev)
+	{
+	ev.dataTransfer.setData("Text",ev.target.id);
+	}
 
-
+	function drop(ev)
+	{
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("Text");
+	ev.target.appendChild(document.getElementById(data));
+	}
+	
+	
+	</script>
+	
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 
@@ -21,11 +53,38 @@
 	    $(".drag-image").draggable();
 	});
 	</script>
-	</head>
+	
+	
+	
+	
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+<html>
+<body>	
+	
+
+	
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  <img src="assets/08.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="71" height="110"></div>
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  <img src="assets/09.jpeg" draggable="true" ondragstart="drag(event)" id="drag2" width="71" height="110"></div>
+	<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	
+	
+
+	
+     
+
+
+
+	
 	
 	
 	<div id="content" style="background-color:#AAA900;height:1000px;width:400px;float:right;">
-	  Karte(n) hier ablegen</div>
+	  Karte(n) hier hin ziehen mit der Maus</div>
 	
 	
 <div>
@@ -42,7 +101,7 @@
 	</tr>
     <tr>
       <% cards.each do |cards| %>
-      <td><%= image_tag(cards, :class => "drag-image") %></td>
+      <td><%= image_tag(cards,   :class => "drag-image",  :id => "drag4", :ondragstart => "drag(event)", :ondrop => "drag(event)", :ondragover => "allowDrop(event)" ) %></td>
       <% end %>     
     </tr>
     <% end %>
@@ -56,6 +115,6 @@
 </div>
 </body>
 </html>
-
+</head>
 
 
