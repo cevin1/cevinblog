@@ -6,7 +6,7 @@
 	
 	<style type="text/css">
 	#div1
-	{float:left; width:72px; height:111px; margin:50px;padding:50px;  border:1px solid #aaaaaa;}
+	{float:left; width:72px; height:111px; margin:50px;padding:50px;  border:2px solid #aaabaa;}
 	</style>
 	
 	<style type="text/css">
@@ -95,13 +95,13 @@
 	
     <% @cards.in_groups_of(8, false) do |cards| %>
 	<tr>
-		<td colspan="8">Player <%= nr %></td>
+		<td colspan="8">Spieler <%= nr %></td>
 		<% nr = nr + 1 %>
 		
 	</tr>
     <tr>
       <% cards.each do |cards| %>
-      <td><%= image_tag(cards,   :class => "drag-image",  :id => "dragimage", :ondragstart => "drag(event)", :ondrop => "drag(event)", :ondragover => "allowDrop(event)" ) %></td>
+      <td><%= image_tag(cards,   :class => "drag-image",  :id => "drag4", :ondragstart => "drag(event)", :ondrop => "drag(event)", :ondragover => "allowDrop(event)" ) %></td>
       <% end %>     
     </tr>
     <% end %>
