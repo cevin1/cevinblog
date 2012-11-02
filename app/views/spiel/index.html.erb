@@ -101,7 +101,7 @@
 	</tr>
     <tr>
       <% cards.each do |cards| %>
-      <td><%= image_tag(cards,   :class => "drag-image",  :id => "dragcard", :ondragstart => "drag(event)", :ondrop => "drag(event)", :ondragover => "allowDrop(event)" ) %></td>
+      <td><%= image_tag(cards,   :class => "drag-image",  :id => "drafimage", :ondragstart => "drag(event)", :ondrop => "drag(event)", :ondragover => "allowDrop(event)" ) %></td>
       <% end %>     
     </tr>
     <% end %>
