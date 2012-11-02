@@ -1,0 +1,13 @@
+Digger Das Spiel !
+-------------------------
+Spielregeln:Gewinner ist  der jenige der alle seine karten los wird 
+
+Alle karten werden werden so aufgeteilt das jeder die gleiche anzahl an karten bekommt der rest wird weg gelegt
+
+Der spieler mit der PICKE 7 auf der Hand beginnt!
+Er legt eine beliebige karte ( oder ein paar oder ein drilling oder vieling )
+der spieler der als nächstes dran ist muss die karte(n) überbieten 
+beispiel legt der erste spieler eine 7 (wobei die farbe egal ist ) kann der nächste spieler nur mit einer 8, 9, 10, bube, dame oder könig topen 
+legt der erste spieler ein paar kann man es auch nur mit einem höheren paar topen 
+...usw... usf... 
+wer als erstes alle karten aus der hand hat gewinnt !
